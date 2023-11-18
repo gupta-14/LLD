@@ -1,0 +1,6 @@
+#client
+from Adapter.weightMachineAdapterImpl import WeightMachineAdapterImpl
+from Adaptee.weightMachineForBabies import weightMachineForBabies
+
+weightMachineAdapter = WeightMachineAdapterImpl(weightMachineForBabies())
+print(weightMachineAdapter.get_weight_in_kg())
