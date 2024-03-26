@@ -1,10 +1,8 @@
-# from strategy.driveStrategy import DriveStrategy
+from strategy.driveStrategy import DriveStrategy
 
 class Vehicle(object):
 
-    # driveObj = DriveStrategy()
-
-    def __init__(self, driveObj):
+    def __init__(self, driveObj: DriveStrategy):
         self.driveObj = driveObj
 
     def drive(self):
