@@ -1,5 +1,5 @@
-from VehicleType import VehicleType
-from Status import Status
+from Product.VehicleType import VehicleType
+from Product.Status import Status
 
 class Vehicle:
     def __init__(self) -> None:
