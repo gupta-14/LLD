@@ -3,7 +3,7 @@ from ItemShelf import ItemShelf
 
 class Inventory:
     def __init__(self, item_count: int) -> None:
-        self.inventory = [None]*item_count
+        self.inventory = [ItemShelf() for _ in range(item_count)]
         self.initial_empty_inventory()
 
     def get_inventory(self):
