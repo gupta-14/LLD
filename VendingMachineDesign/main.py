@@ -40,7 +40,7 @@ def main():
     except Exception as e:
         display_inventory(vending_machine)
 
-def fill_up_inventory(vending_machine):
+def fill_up_inventory(vending_machine: VendingMachine):
     slots = vending_machine.get_inventory().get_inventory()
     for i in range(len(slots)):
         new_item = Item()
@@ -59,13 +59,13 @@ def fill_up_inventory(vending_machine):
         slots[i].set_item(new_item)
         slots[i].set_sold_out(False)
 
-def display_inventory(vending_machine):
+def display_inventory(vending_machine: VendingMachine):
     slots = vending_machine.get_inventory().get_inventory()
-    for slot in slots:
-        print("CodeNumber: " + str(slot.get_code()) +
-              " Item: " + slot.get_item().get_type()[0] +
-              " Price: " + str(slot.get_item().get_price()) +
-              " isAvailable: " + str(not slot.is_sold_out()))
+    for i in range(len(slots)):
+        print("CodeNumber: " + str(slots[i].get_code()) +
+              " Item: " + slots[i].get_item().get_type().name +
+              " Price: " + str(slots[i].get_item().get_price()) +
+              " isAvailable: " + str(not slots[i].is_sold_out()))
 
 if __name__ == "__main__":
     main()
